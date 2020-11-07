@@ -25,14 +25,14 @@
           <a class="main-logo">
             <img class="logo" src="img/logo-technomart.png" width="107" height="17" alt="Логотип магазина Техномарт.">
           </a>
-          <form class="search" method="get" action="https://echo.htmlacademy.ru/">
-            <label class="search-label">
-              <input type="search" name="search" placeholder="Поиск:">
+          <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
+            <label class="label label-search">
+              <input class="input-search" type="search" name="search" placeholder="Поиск:">
             </label>
-            <label class="search-label">Закладки:
-              <input type="number" name="save-marks" placeholder="0">
+            <label class="label label-save-marks">Закладки:
+              <input class="input" type="number" name="save-marks" placeholder="0">
             </label>
-            <label class="search-label">Корзина:
+            <label class="label label-basket">Корзина:
               <input type="number" name="basket" placeholder="0">
             </label>
             <button class="order" type="button">Оформить заказ</button>
@@ -84,21 +84,52 @@
             <img class="img" src="img/icon-5.svg" width="78" height="63" alt="В кратчайшие сроки.">
           </li>
           <li class="tender-block">
-            <div class="tender-content">
-              <h3 class="title">Перфораторы</h3>
-              <p class="text">Настоящие мужские игрушки</p>
+            <div class="tender-wrap-one">
+              <div class="tender-content">
+                <h3 class="title">Перфораторы</h3>
+                <p class="text">Настоящие мужские игрушки</p>
+              </div>
+              <div class="tender-buttons">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Назад</span>
+                  <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff"/></svg>
+                </a>
+                <a class="button" href="#">
+                  <span class="visually-hidden">Вперёд</span>
+                  <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M2.08 39.06L.08 37l17.01-17.45L.02 2.06l2-2.05L21.1 19.56 2.08 39.06z" fill="#fff"/></svg>
+                </a>
+              </div>
+              <div class="tender-bottom">
+                <a class="tender-link" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                <ul class="slider-list">
+                  <li class="slider-item"><a class="link link-active" href="#"></a></li>
+                  <li class="slider-item"><a class="link" href="#"></a></li>
+                </ul>
+              </div>
             </div>
-            <div class="tender-buttons">
-              <a class="button" href="#">
-                <span class="visually-hidden">Назад</span>
-                <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff"/></svg>
-              </a>
-              <a class="button" href="#">
-                <span class="visually-hidden">Вперёд</span>
-                <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M2.08 39.06L.08 37l17.01-17.45L.02 2.06l2-2.05L21.1 19.56 2.08 39.06z" fill="#fff"/></svg>
-              </a>
+            <div class="tender-wrap-two modal-hidden">
+              <div class="tender-content">
+                <h3 class="title">Дрели</h3>
+                <p class="text">Соседям на радость!</p>
+              </div>
+              <div class="tender-buttons">
+                <a class="button" href="#">
+                  <span class="visually-hidden">Назад</span>
+                  <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.92.94l2 2.05L4.91 20.44l17.07 17.5-2 2.05L.9 20.44 19.92.94z" fill="#fff"/></svg>
+                </a>
+                <a class="button" href="#">
+                  <span class="visually-hidden">Вперёд</span>
+                  <svg width="22" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M2.08 39.06L.08 37l17.01-17.45L.02 2.06l2-2.05L21.1 19.56 2.08 39.06z" fill="#fff"/></svg>
+                </a>
+              </div>
+              <div class="tender-bottom">
+                <a class="tender-link" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
+                <ul class="slider-list">
+                  <li class="slider-item"><a class="link link-active" href="#"></a></li>
+                  <li class="slider-item"><a class="link" href="#"></a></li>
+                </ul>
+              </div>
             </div>
-            <a class="link" href="catalog.html">ОТКРЫТЬ КАТАЛОГ</a>
           </li>
         </ul>
       </section>
@@ -109,7 +140,7 @@
           <a class="link" href="#">все поПулярные товары</a>
         </div>
         <ul class="products-list">
-          <li class="products-item">
+          <li class="products-item products-item-margin">
             <div class="block">
               <img class="img" src="img/products-1.png" width="184" height="164" alt="Прекрасная модель.">
             </div>
@@ -201,6 +232,18 @@
             <p class="text">Ведь мы неплохо заработаем,<br>
             поднимая его на ваш этаж!</p>
           </div>
+          <div class="services-block guarantee-block modal-hidden">
+            <img class="img" src="img/guarantee.png" width="389" height="283" alt="<Большая медаль с оранжевыми ленточками.">
+            <h3 class="title">Гарантия</h3>
+            <p class="text">Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием, <span></span>вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.</p>
+            <p class="text">Дом уж восстановите как-нибудь сами.</p>
+          </div>
+          <div class="services-block credit-block modal-hidden">
+            <img class="img" src="img/credit.png" width="465" height="285" alt="Зеленые банкноты в долларах.">
+            <h3 class="title">Кредит</h3>
+            <p class="text">Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
+            <button class="button" type="button">Отправить заявку</button>
+          </div>
         </div>
       </section>
 
@@ -278,6 +321,42 @@
         </div>
       </div>
     </footer>
+
+    <section class="modal-form">
+      <h2 class="visually-hidden"></h2>
+      <form class="form" method="get" action="https://echo.htmlacademy.ru/">
+        <div class="form-wrapper">
+          <div class="form-block">
+            <div class="block">
+              <label class="label" for="name">Ваше имя:</label>
+              <input class="input-name" type="text" name="name" id="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="block">
+              <label class="label" for="email">Ваш e-mail:</label>
+              <input class="input-email" type="email" name="email" id="email" placeholder="email@example.com">
+            </div>
+          </div>
+          <label class="label" for="text">Текст письма:</label>
+          <textarea class="textarea" id="text" placeholder="В свободной форме"></textarea>
+        </div>
+        <div class="form-button-block">
+          <button class="form-button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button class="button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <img src="img/icon-close.svg" width="21" height="21">
+      </button>
+    </section>
+
+    <section class="modal-map">
+      <h2 class="visually-hidden">Карта расположения магазина</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3997.0831804839117!2d30.313455781649978!3d59.93974846989791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1604688287291!5m2!1sru!2sru" width="943" height="442" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" title="Адрес магазина: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></iframe>
+      <button class="button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <img src="img/icon-close.svg" width="21" height="21">
+      </button>
+    </section>
 
   </body>
 </html>
