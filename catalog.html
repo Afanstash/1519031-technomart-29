@@ -40,11 +40,11 @@
         </div>
       </div>
       <div class="wrapper grid-about">
-        <p class="description red-text">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</p>
-        <div class="contacts">
+        <h1 class="description red-text">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
+        <address class="contacts">
           <p class="phone"><a class="phone-link red-text" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
           <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
+        </address>
         <div class="login-on">
           <p class="text">Равшан Джамшутович</p>
           <ul class="on-list">
@@ -56,7 +56,6 @@
     </header>
 
     <main class="page-main">
-      <h1 class="visually-hidden">Каталог магазина Техномарт.</h1>
       <section class="category wrapper">
         <ul class="category-list">
           <li class="category-item"><a class="link" href="index.html"><svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Главная."><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg></a></li>
@@ -66,8 +65,8 @@
         </ul>
         <h2 class="category-title">ПЕРФОРАТОРЫ</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru/">
-          <h2 class="title">ФИЛЬТР:</h2>
-          <fieldset>
+          <p class="title">ФИЛЬТР:</p>
+          <fieldset class="fieldset fieldset-number">
             <legend>ЦЕНА:</legend>
             <div class="range-filter">
               <div class="scale">
@@ -86,40 +85,40 @@
               </label>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset fieldset-makers">
             <legend>ПРОИЗВОДИТЕЛИ:</legend>
-            <ul class="filter-list">
+            <ul class="filter-list list-checkbox">
               <li class="filter-option filter-checkbox">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="BOSCH" id="filter-BOSCH" checked="checked">
-                <label for="filter-BOSCH">BOSCH</label>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makers" value="BOSCH" id="filter-item1" checked="checked">
+                <label for="filter-item1">BOSCH</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="ИНТЕРСКОЛ" id="filter-interskol">
-                <label for="filter-interskol">ИНТЕРСКОЛ</label>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makers" value="ИНТЕРСКОЛ" id="filter-item2">
+                <label for="filter-item2">ИНТЕРСКОЛ</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="MAKITA" id="filter-MAKITA" checked="checked">
-                <label for="filter-MAKITA">MAKIta</label>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makers" value="MAKITA" id="filter-item3" checked="checked">
+                <label for="filter-item3">MAKIta</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="DEWALT" id="filter-DEWALT">
-                <label for="filter-DEWALT">Dewalt</label>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makers" value="DEWALT" id="filter-item4">
+                <label for="filter-item4">Dewalt</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="HITACHI" id="filter-HITACHI">
-                <label for="filter-HITACHI">Hitachi</label>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makers" value="HITACHI" id="filter-item5">
+                <label for="filter-item5">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset fieldset-power">
             <legend>ПИТАНИЕ:</legend>
             <ul class="filter-list list-radio">
               <li class="filter-option filter-radio">
-                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power" id="filter-battery" checked="checked">
+                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power" value="battery" id="filter-battery" checked="checked">
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power" id="filter-net">
+                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power" value="net" id="filter-net">
                 <label for="filter-net">Сетевые</label>
               </li>
             </ul>
@@ -146,90 +145,90 @@
         </div>
         <ul class="products-list">
           <li class="products-item">
-            <div class="block">
+            <div class="block-one">
               <img class="img-3" src="img/products-3.png" width="144" height="128" alt="Удобная ручка.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="text">30500 Р.</p>
+              <p class="text text-decoration">30500 Р.</p>
               <p class="text text-sale">25500 Р.</p>
             </div>
           </li>
           <li class="products-item">
-            <div class="block">
+            <div class="block-one">
               <img class="img-3" src="img/products-3.png" width="144" height="128" alt="Удобная ручка.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="text">30500 Р.</p>
+              <p class="text text-decoration">30500 Р.</p>
               <p class="text text-sale">25500 Р.</p>
             </div>
           </li>
           <li class="products-item new products-item-active">
-            <div class=" block products-button">
+            <div class=" block-one products-button">
               <button class="button button-buy" type="button">КУПИТЬ</button>
               <button class="button button-bookmark" type="button">В закладки</button>
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="text">30500 Р.</p>
+              <p class="text text-decoration">30500 Р.</p>
               <p class="text text-sale">25500 Р.</p>
             </div>
           </li>
           <li class="products-item new">
-            <div class="block">
+            <div class="block-one">
               <img class="img-2" src="img/products-2.png" width="127" height="112" alt="За этой моделью возвращаются.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
-              <p class="text">22500 Р.</p>
+              <p class="text text-decoration">22500 Р.</p>
               <p class="text text-sale">15500 Р.</p>
             </div>
           </li>
           <li class="products-item">
-            <div class="block">
+            <div class="block-one">
               <img class="img-3" src="img/products-3.png" width="144" height="128" alt="Удобная ручка.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="text">30500 Р.</p>
+              <p class="text text-decoration">30500 Р.</p>
               <p class="text text-sale">25500 Р.</p>
             </div>
           </li>
           <li class="products-item new">
-            <div class="block">
+            <div class="block-one">
               <img class="img-4" src="img/products-4.png" width="127" height="112" alt="Большая ёмкость аккумуляторной батареи.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
               <p class="text text-sale without-sale">12500 Р.</p>
             </div>
           </li>
           <li class="products-item new">
-            <div class="block">
+            <div class="block-one">
               <img class="img-2" src="img/products-2.png" width="127" height="112" alt="За этой моделью возвращаются.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
-              <p class="text">22500 Р.</p>
+              <p class="text text-decoration">22500 Р.</p>
               <p class="text text-sale">15500 Р.</p>
             </div>
           </li>
           <li class="products-item">
-            <div class="block">
+            <div class="block-one">
               <img class="img-3" src="img/products-3.png" width="144" height="128" alt="Удобная ручка.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
-              <p class="text">30500 Р.</p>
+              <p class="text text-decoration">30500 Р.</p>
               <p class="text text-sale">25500 Р.</p>
             </div>
           </li>
           <li class="products-item new">
-            <div class="block">
+            <div class="block-one">
               <img class="img-4" src="img/products-4.png" width="127" height="112" alt="Большая ёмкость аккумуляторной батареи.">
             </div>
-            <div class="block">
+            <div class="block-two">
               <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
               <p class="text text-sale without-sale">12500 Р.</p>
             </div>
@@ -242,14 +241,14 @@
           <li class="pagination-item"><a class="link link-next" href="#">СЛЕДУЮЩАЯ</a></li>
         </ul>
       </section>
-      <article class="mean">
+      <section class="mean">
         <div class="wrapper mean-block">
           <h2 class="title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
           <p class="text">Перфоратор —универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
           <p class="text">Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
           <p class="text">В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
-      </article>
+      </section>
     </main>
 
     <footer class="page-footer">
@@ -296,7 +295,7 @@
             </li>
           </ul>
           <p class="text text-feedback">Обратная связь:
-            <a class="link" href="#">mail@htmlacademy.ru</a>
+            <a class="link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="text text-made">Разработано —
             <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
