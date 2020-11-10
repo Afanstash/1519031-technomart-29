@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Fonts */
 
 /* pt-sans-regular - latin_cyrillic */
@@ -27,7 +34,7 @@
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
-  src: local(''),/*почему здесь не такая же схемаб как в PTSans?*/
+  src: local(''),
        url('../fonts/cuprum.woff2') format('woff2'),
        url('../fonts/cuprum.woff') format('woff');
   font-display: swap;
@@ -164,6 +171,7 @@ img {
 .container-grid {
   min-height: 100vh;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -185,6 +193,7 @@ img {
 .page-header {
   min-height: 320px;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   background-color: var(--basic-background-header);
@@ -251,7 +260,7 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.input-search + .label-search:focus::before {/*не работает!*/
+.input-search + .label-search:focus::before {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z' fill='%23EE3643'/%3E%3C/svg%3E");
 }
 
@@ -262,12 +271,36 @@ img {
   background-color: transparent;
 }
 
+.search-form .input-search::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+
+.search-form .input-search::-moz-placeholder {
+  color: var(--basic-white);
+}
+
 .search-form .input-search::placeholder {
+  color: var(--basic-white);
+}
+
+.search-form .input-search:hover::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+
+.search-form .input-search:hover::-moz-placeholder {
   color: var(--basic-white);
 }
 
 .search-form .input-search:hover::placeholder {
   color: var(--basic-white);
+}
+
+.search-form .input-search:focus::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.search-form .input-search:focus::-moz-placeholder {
+  color: var(--basic-black);
 }
 
 .search-form .input-search:focus::placeholder {
@@ -524,7 +557,7 @@ img {
   color: var(--basic-white);
 }
 
-.page-header .nav-item:nth-child(7) {/*это какие-то идеальные условия, а если слова будут меньше?*/
+.page-header .nav-item:nth-child(7) {
   margin-right: 0px;
 }
 
@@ -562,7 +595,7 @@ img {
 .login-on .block {
   margin-bottom: 7px;
   width: 299px;
-  background-color: var(--basic-white);/*верно ли определён цвет по макету?*/
+  background-color: var(--basic-white);
   font-size: 21px;
   line-height: 21px;
   align-self: flex-end;
@@ -883,6 +916,7 @@ img {
   min-height: 123px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, -webkit-min-content);
   grid-template-rows: repeat(2, min-content);
   align-content: space-between;
   padding: 20px 0 21px 22px;
@@ -1218,7 +1252,6 @@ img {
 
 .products-item .text-decoration{
   position: relative;
-/*  text-decoration-line: line-through;*/
 }
 
 .products-item .text-decoration:after {
@@ -1279,7 +1312,7 @@ img {
 }
 
 .makers-item:not(:first-child) .img {
-  margin-top: -5px;/*нужно ли задать для .makers-item значения ширины и высоты?*/
+  margin-top: -5px;
 }
 
 .makers-item:nth-child(4) .img,
@@ -1299,7 +1332,8 @@ img {
 
 .makers-list .makers-link:hover,
 .makers-list .makers-link:focus {
-  filter: var(--basic-box-shadow);
+  -webkit-filter: var(--basic-box-shadow);
+          filter: var(--basic-box-shadow);
 }
 
 .makers-list .makers-link:active {
@@ -1318,6 +1352,7 @@ img {
 .services .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, -webkit-min-content);
   grid-template-rows: repeat(3, min-content);
   grid-column-gap: 20px;
 }
@@ -1361,11 +1396,9 @@ img {
   right: 0px;
   width: 10px;
   height: 279px;
-  background-color: var(--basic-black-opacity);/*это нужно, я не понимаю, зачем это выведено на макете?*/
   background-image: url("../img/services-list-object.png");
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.25; /*правильно же, что использую?*/
 }
 
 .services .services-item {
@@ -1440,7 +1473,7 @@ img {
   width: 317px;
 }
 
-.guarantee-block span {/*так верно?*/
+.guarantee-block span {
   display: inline-block;
   width: 2px;
 }
@@ -1665,7 +1698,7 @@ img {
   padding-bottom: 25px;
   margin-bottom: 16px;
   border: none;
-  border-bottom: 1px solid var(--basic-tender-content-opacity);/*как определить цвет? верно ли я его определила?*/
+  border-bottom: 1px solid var(--basic-tender-content-opacity);
 }
 
 .filter .fieldset-power {
@@ -1693,13 +1726,13 @@ img {
 .range-filter .scale {
   width: 180px;
   height: 2px;
-  background-color: var(--basic-tender-content-opacity);/*как определить цвет? верно ли я его определила?*/
+  background-color: var(--basic-tender-content-opacity);
 }
 
 .range-filter .bar {
   width: 152px;
   height: 2px;
-  background-color: var(--basic-olive);/*как определить цвет? верно ли я его определила?*/
+  background-color: var(--basic-olive);
 }
 
 .range-filter .toggle {
@@ -1971,7 +2004,8 @@ img {
 }
 
 .category .products-item-active {
-  filter: var(--basic-box-shadow);
+  -webkit-filter: var(--basic-box-shadow);
+          filter: var(--basic-box-shadow);
 }
 
 .products-item .products-button {
@@ -2126,7 +2160,8 @@ img {
   min-height: 432px;
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
-  filter: var(--basic-box-shadow);
+  -webkit-filter: var(--basic-box-shadow);
+          filter: var(--basic-box-shadow);
   position: relative;
 }
 
@@ -2171,6 +2206,14 @@ img {
   border: 2px solid var(--basic-border-third);
 }
 
+.form input::-webkit-input-placeholder {
+  color: var(--basic-text-decoration);
+}
+
+.form input::-moz-placeholder {
+  color: var(--basic-text-decoration);
+}
+
 .form input::placeholder {
   color: var(--basic-text-decoration);
 }
@@ -2184,6 +2227,14 @@ img {
   font-weight: 400;
   font-family: 'PT Sans', Arial, sans-serif;
   border: 2px solid var(--basic-border-third);
+}
+
+.form .textarea::-webkit-input-placeholder {
+  color: var(--basic-text-decoration);
+}
+
+.form .textarea::-moz-placeholder {
+  color: var(--basic-text-decoration);
 }
 
 .form .textarea::placeholder {
@@ -2229,7 +2280,8 @@ img {
   height: 449px;
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-grey-lighter);
-  filter: var(--basic-box-shadow);
+  -webkit-filter: var(--basic-box-shadow);
+          filter: var(--basic-box-shadow);
   position: relative;
 }
 
@@ -2259,7 +2311,8 @@ img {
   min-height: 282px;
   border-top: 7px solid var(--basic-red);
   background-color: var(--basic-white);
-  filter: var(--basic-box-shadow);
+  -webkit-filter: var(--basic-box-shadow);
+          filter: var(--basic-box-shadow);
   position: relative;
 }
 
