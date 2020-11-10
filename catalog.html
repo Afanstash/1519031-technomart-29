@@ -21,22 +21,19 @@
         </ul>
       </nav>
       <div class="results">
-        <div class="wrapper">
+        <div class="container wrapper">
           <a class="main-logo" href="index.html">
             <img class="logo" src="img/logo-technomart.png" width="107" height="17" alt="Логотип магазина Техномарт.">
           </a>
-          <form class="search-form search-form-on" method="get" action="https://echo.htmlacademy.ru/">
-            <label class="label label-search">
-              <input class="input-search" type="search" name="search" placeholder="Поиск:">
-            </label>
-            <label class="label label-save-marks">Закладки:
-              <input type="number" name="save-marks" placeholder="0">
-            </label>
-            <label class="label label-basket">Корзина:
-              <input type="number" name="basket" placeholder="10">
-            </label>
-            <button class="order" type="button">Оформить заказ</button>
+          <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
+            <input class="input-search" type="search" name="search" placeholder="Поиск:" id="id-search">
+            <label class="label label-search" for="id-search"></label>
           </form>
+          <ul class="order-list">
+            <li class="order-item"><a class="order-link order-link-bookmarks" href="#">Закладки: 0</a></li>
+            <li class="order-item"><a class="order-link order-link-basket order-link-active" href="#">Корзина: 10</a></li>
+          </ul>
+          <a class="order" type="button">Оформить заказ</a>
         </div>
       </div>
       <div class="wrapper grid-about">
@@ -46,10 +43,16 @@
           <p class="adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </address>
         <div class="login-on">
-          <p class="text">Равшан Джамшутович</p>
+          <div class="block">
+            <a class="name">Равшан Джамшутович</a>
+            <a class="exit" href="#">
+              <span class="visually-hidden">Выход</span>
+              <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 9L11.12.5v6h-6v5h6v6L20 9z" fill="#C5C5C5"/><path d="M2.1 14.45V3.55c.02-.38.18-1.06 1.02-1.06h5.02V.5H3.12C.94.5.12 2.31.09 3.53v10.94C.1 15.7.94 17.5 3.12 17.5h5.02v-1.99H3.12c-.84 0-1-.68-1.01-1.06z" fill="#C5C5C5"/></svg>
+            </a>
+          </div>
           <ul class="on-list">
-            <li class="on-item"><a href="#">Мои заказы</a></li>
-            <li class="on-item"><a href="#">Личный кабинет</a></li>
+            <li class="on-item"><a class="on-link" href="#">Мои заказы</a></li>
+            <li class="on-item"><a class="on-link on-link-point" href="#">Личный кабинет</a></li>
           </ul>
         </div>
       </div>
@@ -254,7 +257,7 @@
     <footer class="page-footer">
       <div class="wrapper">
         <div class="footer-contacts">
-          <a class="footer-logo">
+          <a class="footer-logo" href="index.html">
             <img class="logo" src="img/logo-technomart.png" width="138" height="23" alt="Логотип магазина Техномарт.">
           </a>
           <p class="text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 +7 (812) 555-05-55</p>
@@ -304,7 +307,7 @@
       </div>
     </footer>
 
-    <section class="modal-add">
+    <section class="modal-add modal-position modal-hidden">
       <h2 class="title">Товар добавлен в корзину!</h2>
       <div class="add-block">
         <button class="button order-button" type="submit">Оформить заказ</button>
