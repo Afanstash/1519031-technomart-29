@@ -26,8 +26,9 @@
             <img class="logo" src="img/logo-technomart.png" width="107" height="17" alt="Логотип магазина Техномарт.">
           </a>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru/">
-            <input class="input-search" type="search" name="search" placeholder="Поиск:" id="id-search">
-            <label class="label label-search" for="id-search"></label>
+            <label class="label label-search" for="id-search">
+              <input class="input-search" type="search" name="search" placeholder="Поиск:" id="id-search">
+            </label>
           </form>
           <ul class="order-list">
             <li class="order-item"><a class="order-link order-link-bookmarks" href="#">Закладки: 0</a></li>
@@ -310,8 +311,8 @@
     <section class="modal-add modal-position modal-hidden">
       <h2 class="title">Товар добавлен в корзину!</h2>
       <div class="add-block">
-        <button class="button order-button" type="submit">Оформить заказ</button>
-        <button class="button continue -button" type="submit">Продолжить покупки</button>
+        <a href="#" class="button order-button">Оформить заказ</a>
+        <button class="button continue-button" type="button">Продолжить покупки</button>
       </div>
       <button class="button-close" type="button">
         <img src="img/icon-close.svg" width="21" height="21" alt="Закрыть">

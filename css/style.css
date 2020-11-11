@@ -235,19 +235,19 @@ img {
   color: var(--basic-white);
 }
 
-.input-search + .label-search {
+/*.input-search + */.label-search {
   display: block;
   position: relative;
 }
 
-.input-search + .label-search:focus {
+/*.input-search + */.label-search:focus {
   background-color: var(--basic-white);
 }
 
-.input-search + .label-search::before {
+/*.input-search + */.label-search::before {
   content: "";
   position: absolute;
-  top: -30px;
+  top: 12px;
   left: 17px;
   width: 17px;
   height: 17px;
@@ -256,11 +256,11 @@ img {
   background-position: 0 0;
 }
 
-.input-search + .label-search:hover::before {
+/*.input-search + */.label-search:hover::before {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
-.input-search + .label-search:focus::before {
+/*.input-search + */.label-search:focus::before {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.46 12.04L17 15.6 15.59 17l-3.55-3.54a7.5 7.5 0 111.41-1.41zM7.5 2a5.5 5.5 0 10.01 11.01A5.5 5.5 0 007.5 2z' fill='%23EE3643'/%3E%3C/svg%3E");
 }
 
@@ -1061,6 +1061,7 @@ img {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  vertical-align: top;
 }
 
 .tender-buttons .button-left {
@@ -1410,6 +1411,7 @@ img {
 .services-item .link {
   padding: 14px 22px 18px;
   width: 240px;
+  vertical-align: top;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -1475,6 +1477,7 @@ img {
 
 .guarantee-block span {
   display: inline-block;
+  vertical-align: top;
   width: 2px;
 }
 
@@ -1493,6 +1496,7 @@ img {
   margin-bottom: 22px;
   width: 195px;
   min-height: 38px;
+  vertical-align: top;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1884,6 +1888,7 @@ img {
 
 .filter .button {
   padding: 10px 10px 8px;
+  vertical-align: top;
   font-size: 13px;
   line-height: 18px;
   font-family: inherit;
@@ -2016,7 +2021,6 @@ img {
 .products-button .button {
   margin-bottom: 10px;
   margin-right: 2px;
-  padding: 0;
   padding: 8px;
   font-size: 14px;
   line-height: 18px;
@@ -2032,6 +2036,7 @@ img {
 }
 
 .products-button .button-buy {
+  padding-top: 10px;
   padding-left: 21px;
   color: var(--basic-white);
   background-color: var(--basic-olive);
@@ -2062,6 +2067,7 @@ img {
 }
 
 .products-button .button-bookmark {
+  vertical-align: top;
   margin-bottom: 18px;
   color: var(--basic-dark-blue);
   background-color: var(--basic-white);
@@ -2252,6 +2258,7 @@ img {
   line-height: 18px;
   width: 460px;
   min-height: 38px;
+  vertical-align: top;
   text-transform: uppercase;
   cursor: pointer;
   color: var(--basic-white);
@@ -2263,6 +2270,7 @@ img {
   padding: 0;
   width: 21px;
   height: 21px;
+  vertical-align: top;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -2293,6 +2301,7 @@ img {
   padding: 0;
   width: 21px;
   height: 21px;
+  vertical-align: top;
   border: 0;
   background-color: transparent;
   cursor: pointer;
@@ -2365,10 +2374,15 @@ img {
   background-color: var(--basic-red);
 }
 
+.add-block .continue-button {
+  vertical-align: top;
+}
+
 .modal-add .button-close {
   padding: 0;
   width: 21px;
   height: 21px;
+  vertical-align: top;
   border: 0;
   background-color: transparent;
   cursor: pointer;
